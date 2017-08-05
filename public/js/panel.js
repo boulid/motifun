@@ -1,36 +1,47 @@
 /* global TrelloPowerUp */
 
+
+
 var t = TrelloPowerUp.iframe();
 
 // Elements with IDs are available as properties of `window`.
-window.panel.addEventListener('submit', function(event){
-  // Stop the browser trying to submit the form itself.
-  event.preventDefault();
+window.panel.addEventListener('submit', function (event) {
+    // Stop the browser trying to submit the form itself.
+    event.preventDefault();
 
-	t.member('all')
+    t.member('all')
 	.then(function (member) {
-	 var userId=member.id;
-	 var userName = member.fullName;
-	 
-	// Get the current point in the current card	
-	var currentPoints=0;
-         if ($("input:checkbox[name=chks]:checked").length ==3 ) {
-			 var numCheked='';
-			 for(i = 1; i <= $("input:checkbox[name=chks]").length; i++) {
-				 if ($('input:checkbox[id=ck_'+i.toString()+']').is(':checked')){
-					numCheked+=i.toString()+',';
-				 }
-			 }
-			 
-			return t.set('board', 'shared', userId+'_date', GetCurrentDate())
-			.then(function(){
-				return t.set('board', 'shared', userId+'_items', numCheked.substring(0, numCheked.length-1));	
-			})
-			.then(function(){
-				t.get('board', 'shared', userId+'_items','').then(function(selecteditems){
-					t.get('board', 'shared', userId+'_tentations','').then(function(tentations){	
+	    var userId = member.id;
+	    var userName = member.fullName;
 
-						//return t.boardBar({
+	    // Get the current point in the current card	
+	    var currentPoints = 0;
+	    if ($("input:checkbox[name=chks]:checked").length == 3) {
+	        var numCheked = '';
+	        for (i = 1; i <= $("input:checkbox[name=chks]").length; i++) {
+	            if ($('input:checkbox[id=ck_' + i.toString() + ']').is(':checked')) {
+	                numCheked += i.toString() + ',';
+	            }
+	        }
+
+	        return t.set('board', 'shared', userId + '_date', GetCurrentDate())
+			.then(function () {
+			    return t.set('board', 'shared', userId + '_items', numCheked.substring(0, numCheked.length - 1));
+			})
+			.then(function () {
+			    t.get('board', 'shared', userId + '_items', '').then(function (selecteditems) {
+			        t.get('board', 'shared', userId + '_tentations', '').then(function (tentations) {
+			            var myDta = { _user: userName, _tentations: tentations, _items: selecteditems };
+			            $.ajax({
+			                url: 'https://trellofun.herokuapp.com/',
+			                type: 'POST',
+			                data: myDta,
+			                success: function (data) {
+			                }
+
+			            });
+                       
+                        						//return t.boardBar({
 						return t.overlay({	
 						  //url: './game.html',
 						  url: '../exe/index.html',
@@ -44,15 +55,16 @@ window.panel.addEventListener('submit', function(event){
 						.then(function(){
 							 t.closePopup();
 							});;
-					});
-				
-				});
-				
+			            
+			        });
+
+			    });
+
 			});
-				
-        } else {
-			alert("You should select three Items !");
-        }
+
+	    } else {
+	        alert("You should select three Items !");
+	    }
 	});
 });
 
