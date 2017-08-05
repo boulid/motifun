@@ -1,0 +1,28 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="https://trello.com/power-ups/power-up.css">
+	<link rel="stylesheet" href="./css/stars.css">
+	<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.2.1.min.js"></script>
+   <script src="https://trello.com/power-ups/power-up.min.js"></script>
+  </head>
+  <body>
+    <form id="estimate">
+      <label for="estimate" id="title">Points:</label>  
+	    <fieldset class="rating" name="fieldo">     
+        <input type="radio" name="stars" id="4_stars" value="4" >
+        <label class="stars" for="4_stars">4 stars</label>
+        <input type="radio" name="stars" id="3_stars" value="3" >
+        <label class="stars" for="3_stars">3 stars</label>
+        <input type="radio" name="stars" id="2_stars" value="2" >
+        <label class="stars" for="2_stars">2 stars</label>
+        <input type="radio" name="stars" id="1_stars" value="1" >
+        <label class="stars" for="1_stars">1 star</label>
+        <input type="radio" name="stars" id="0_stars" value="0" >
+        <label class="stars" for="0_stars">0 star</label>
+    </fieldset>
+	
+      <button type="submit" class="mod-primary" name="save" >Save</button>
+    </form>
+    <script src="./js/stars.js"></script>
+  </body>
+</html>

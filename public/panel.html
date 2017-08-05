@@ -1,0 +1,40 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="https://trello.com/power-ups/power-up.css">
+	<link rel="stylesheet" href="./css/panel.css">
+	<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.2.1.min.js"></script>
+   <script src="https://trello.com/power-ups/power-up.min.js"></script>
+  </head>
+  <body>
+    <form id="panel">
+	<div style='float:left'>
+    <div id="score"></div>
+    <label class="control control--checkbox">First Prize = 20
+      <input type="checkbox" id="ck_1" name="chks" value="20" />
+      <div class="control__indicator"> </div>
+    </label>
+    <label class="control control--checkbox">Second Prize = 15
+      <input type="checkbox" id="ck_2" name="chks" value="15" />
+      <div class="control__indicator"></div>
+    </label>
+    <label class="control control--checkbox">Third Prize = 10
+      <input type="checkbox" id="ck_3" name="chks" value="10" />
+      <div class="control__indicator"></div>
+    </label>
+	<label class="control control--checkbox">Fourth Prize = 5
+      <input type="checkbox" id="ck_4" name="chks" value="5" />
+      <div class="control__indicator"></div>
+    </label>
+	<label class="control control--checkbox">Fifth Prize = 3 
+      <input type="checkbox" id="ck_5" name="chks" value="3" />
+      <div class="control__indicator"></div>
+    </label>
+	
+	<button type="submit" class="mod-primary" name="save">Play !</button>
+	</div>
+	<div id="winners">
+	</div>
+    </form>
+    <script src="./js/panel.js"></script>
+  </body>
+</html>

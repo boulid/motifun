@@ -1,0 +1,35 @@
+.rating label {
+    text-indent: -100px;
+    width: 40px !important;
+    height: 30px;
+    overflow: hidden;
+    cursor: pointer;
+	}
+	 
+	fieldset {
+	  border: 0;
+	  border-width: 0;
+	  float: left;
+	}
+	 
+	input[type="radio"] {
+		position: absolute;
+		visibility: hidden;
+	}
+					 
+	input[type="radio"], .rating label.stars {
+		float: right;
+		line-height: 30px;
+		height: 30px;
+	}
+	 
+	.rating label.stars {
+		background: transparent url('../img/star_off.png') no-repeat center center;
+	}
+	 
+	.rating label.stars:hover ~ label.stars, 
+	.rating label.stars:hover, 
+	.rating input[type=radio][name=stars]:checked ~ label.stars {
+		background-image: url('../img/star.png');
+		counter-increment: checkbox;
+	}
