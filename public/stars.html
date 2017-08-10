@@ -7,8 +7,8 @@
   </head>
   <body>
     <form id="estimate">
-      <label for="estimate" id="title">Points:</label>  
-	    <fieldset class="rating" name="fieldo">     
+      <label for="estimate" id="title"></label>  
+	    <fieldset class="rating" name="fieldo" id="fieldo" hidden="hidden">     
         <input type="radio" name="stars" id="4_stars" value="4" >
         <label class="stars" for="4_stars">4 stars</label>
         <input type="radio" name="stars" id="3_stars" value="3" >
@@ -20,8 +20,6 @@
         <input type="radio" name="stars" id="0_stars" value="0" >
         <label class="stars" for="0_stars">0 star</label>
     </fieldset>
-	
-      <button type="submit" class="mod-primary" name="save" >Save</button>
     </form>
     <script src="./js/stars.js"></script>
   </body>

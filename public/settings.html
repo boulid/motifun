@@ -1,0 +1,27 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="https://trello.com/power-ups/power-up.css">
+    <link rel="stylesheet" href="./css/panel.css">
+	<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.2.1.min.js"></script>
+   <script src="https://trello.com/power-ups/power-up.min.js"></script>
+  </head>
+<body>
+<form id="settings">
+<div id="title"></div>
+<table align='center' cellspacing=2 cellpadding=5 id="data_table" border=1 hidden="hidden" >
+	<tr>
+		<th style="width: 50%;">Name of the Prize</th>
+		<th>Notes</th>
+		<th></th>
+	</tr>
+	<tr>
+		<td><input type="text" name="tlabel" id="tlabel" ></td> <!-- Empecher underscrore !!-->
+		<td><input type="number" min="1" step="1" name="tnote"  id="tnote" ></td>
+		<td><input type="button" class="add" onclick="addrow();" value="Add" class="mod-primary"></td>
+	</tr>
+</table>
+
+</form>
+</body>
+<script src="./js/settings.js"></script>
+</html>
