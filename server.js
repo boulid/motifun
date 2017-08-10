@@ -1,7 +1,7 @@
 var express = require('express');
 var cors = require('cors');
 var jsonfile = require('jsonfile');
-var bodyParser = require('body-parser')
+var bodyParser = require('body-parser');
 
 var app = express();
 

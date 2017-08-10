@@ -7,8 +7,10 @@
     "start": "node server.js"
   },
   "dependencies": {
+    "body-parser": "^1.17.2",
+    "cors": "^2.8.1",
     "express": "^4.15.2",
-    "cors": "^2.8.1"
+    "jsonfile": "^3.0.1"
   },
   "engines": {
     "node": "6.10.x"
