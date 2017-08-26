@@ -1,6 +1,6 @@
 {
   "name": ".MotiFun",
-  "details":"Get motivated and have fun while working on Trello",
+  "details":"The [MotiFun](https://devpost.com/software/motifun) power up allow the assessment of members while they complete tasks (cards) by giving them points.\n The earned points of each member allow him to choose some of the prizes he want to gamble on while playing the game.\n Only the admins of the boards are responsible of adding and removing prizes and assessing cards.\n To play the game you need to install the [unity web player](https://unity3d.com/webplayer)",
   "icon": {
     "url": "./if_trophy_1054950.png"
   },
@@ -11,7 +11,8 @@
 	"card-badges",
 	"card-detail-badges",
 	"board-buttons",
-	"show-settings"
+	"authorization-status",
+    "show-authorization"
   ],
   "connectors": {
     "iframe": {

@@ -1,14 +1,14 @@
 <html>
   <head>
     <link rel="stylesheet" href="https://trello.com/power-ups/power-up.css">
-    <link rel="stylesheet" href="./css/panel.css">
 	<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.2.1.min.js"></script>
    <script src="https://trello.com/power-ups/power-up.min.js"></script>
+   <script src="https://api.trello.com/1/client.js?key=6f19d0fae54524efb044895d9779e3b8" type="text/javascript"></script>
   </head>
 <body>
 <form id="settings">
 <div id="title"></div>
-<table align='center' cellspacing=2 cellpadding=5 id="data_table" border=1 hidden="hidden" >
+<table align="center" cellspacing=2 cellpadding=5 id="data_table" border=1 hidden="hidden" >
 	<tr>
 		<th style="width: 50%;">Name of the Prize</th>
 		<th>Notes</th>
@@ -17,7 +17,8 @@
 	<tr>
 		<td><input type="text" name="tlabel" id="tlabel" ></td> <!-- Empecher underscrore !!-->
 		<td><input type="number" min="1" step="1" name="tnote"  id="tnote" ></td>
-		<td><input type="button" class="add" onclick="addrow();" value="Add" class="mod-primary"></td>
+		<td><input type="button" onclick="addrow();" value="Add" style="background: linear-gradient(to bottom,#61BD4F 0%,#5AAC44 100%);box-shadow: 0 2px 0 #3F6F21;color: #fff;padding: .1em 1em;">
+		</td>
 	</tr>
 </table>
 

@@ -1,20 +1,57 @@
+
 <html>
   <head>
     <link rel="stylesheet" href="https://trello.com/power-ups/power-up.css">
 	<link rel="stylesheet" href="./css/panel.css">
+	  <link rel="stylesheet" href="./css/jquery-ui.css">
 	<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.2.1.min.js"></script>
    <script src="https://trello.com/power-ups/power-up.min.js"></script>
+	<script src="https://api.trello.com/1/client.js?key=6f19d0fae54524efb044895d9779e3b8" type="text/javascript"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>  
+   
+  <script>
+  $( function() {
+    $( "#tabs" ).tabs();
+  } );
+  </script>   
   </head>
   <body>
+<div id="tabs">
+  <ul>
+    <li><a href="#tabs-1">Start the game</a></li>
+    <li><a href="#tabs-2">Settings</a></li>
+  </ul>
+  <div id="tabs-1">  
     <form id="panel">
 		<div id="score"></div>
 		<div id="checkboxes">
 		</div>
 		<br>
-		<center><i><span style="color:#C98910">Gold</span>  <span style="color:#A8A8A8">Silver</span>  <span style="color:#965A38">Bronze</span></i></center>
+		<div id="colors"><center><i><span style="color:#C98910">Gold</span>  <span style="color:#A8A8A8">Silver</span>  <span style="color:#965A38">Bronze</span></i></center></div>
    
-		<center><button type="submit" class="mod-primary" name="save">Start the game !</button></center>
+		<center><button type="submit" class="mod-primary" id="save" name="save">Start the game !</button></center>
 		 </form>
+	</div>	 
+	
+  <div id="tabs-2">
+     <form id="settings">
+	<div id="title"></div>
+		<table align="center" cellspacing=2 cellpadding=5 id="data_table" border=1 hidden="hidden" >
+			<tr>
+				<th style="width: 50%;">Name of the Prize</th>
+				<th>Pointes</th>
+				<th></th>
+			</tr>
+			<tr>
+				<td><input type="text" name="tlabel" id="tlabel" ></td> <!-- Empecher underscrore !!-->
+				<td><input type="number" min="1" step="1" name="tnote"  id="tnote" ></td>
+				<td><input type="button" style="background: linear-gradient(to bottom,#61BD4F 0%,#5AAC44 100%);box-shadow: 0 2px 0 #3F6F21;color: #fff;padding: .1em 1em;" onclick="addrow();" value="Add" ></td>
+			</tr>
+		</table>
+	</form>
+     </div>		 
+</div>	 
     <script src="./js/panel.js"></script>
+    <script src="./js/settings.js"></script>
   </body>
 </html>

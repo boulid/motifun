@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<title>Motifun Tutorial</title>
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<head>
+<script src="https://trello.com/power-ups/power-up.min.js"></script>	
+<script>
+	  
+var t = window.TrelloPowerUp.iframe();
+
+function closewindow(){	  
+	t.closeModal();
+}
+  </script>   
+</head>
+
+
+<body style="background-color: #e9e9e9; height: 100%;">
+<div>
+	<div class="w3-container">
+	  <p style="font-size: 12px;">The MotiFun power up allow the assessment of members while they complete tasks (cards) by giving them points. The earned points of each member allow him to choose some of the prizes he want to gamble on while playing the game. Only the admins of the boards are responsible of adding and removing prizes and assessing cards. In order to play the game the installation of the unity web player is required (https://unity3d.com/webplayer)</p>
+	</div>
+
+	<div class="w3-content w3-display-container">
+		<div class="w3-display-container mySlides">
+		  <img src="./img/adding_prizes.gif" style="width:100%">
+		  <div class="w3-display-bottomleft w3-large w3-container w3-padding-16 w3-black">
+			Adding prizes (admin member)
+		  </div>
+		</div>
+
+		<div class="w3-display-container mySlides">
+		  <img src="./img/assessement_cards.gif" style="width:100%">
+		  <div class="w3-display-bottomleft w3-large w3-container w3-padding-16 w3-black">
+			Assessement of cards (admin member)
+		  </div>
+		</div>
+
+		<div class="w3-display-container mySlides">
+		  <img src="./img/normal_member.gif" style="width:100%">
+		  <div class="w3-display-bottomleft w3-large w3-container w3-padding-16 w3-black">
+			Choosing prizes (normal member)
+		  </div>
+		</div>
+		<div class="w3-display-container mySlides">
+		  <img src="./img/start_game.gif" style="width:100%">
+		  <div class="w3-display-bottomleft w3-large w3-container w3-padding-16 w3-black">
+			Starting the game (normal member)
+		  </div>
+		</div>
+
+
+
+		<button class="w3-button w3-display-left w3-black" onclick="plusDivs(-1)">&#10094;</button>
+		<button class="w3-button w3-display-right w3-black" onclick="plusDivs(1)">&#10095;</button>
+	</div>
+</div>
+<script>
+var slideIndex = 1;
+showDivs(slideIndex);
+
+function plusDivs(n) {
+  showDivs(slideIndex += n);
+}
+
+function showDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  if (n > x.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = x.length}
+  for (i = 0; i < x.length; i++) {
+     x[i].style.display = "none";  
+  }
+  x[slideIndex-1].style.display = "block";  
+}
+</script>
+
+</body>
+</html>
